@@ -5,7 +5,7 @@
 
 
 #include "device_common.h"
-#include <cstdint>
+#include <stdint.h>
 
 
 int set_LED(uint8_t* state, uint8_t* red, uint8_t* green, uint8_t* blue);

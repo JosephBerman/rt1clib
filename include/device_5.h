@@ -5,7 +5,7 @@
 
 
 #include "device_common.h"
-#include <cstdint>
+#include <stdint.h>
 
 int play_note(uint32_t* frequency, uint16_t duration);
 

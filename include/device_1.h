@@ -3,7 +3,7 @@
 
 // MOTORS
 #include "device_common.h"
-#include <cstdint>
+#include <stdint.h>
 
 // Max 100, Min -100 mm/s
 int set_right_left_motor_speed(int* left_speed, int* right_speed);
