@@ -1,15 +1,14 @@
-#ifndef DEVICE_2
-#define DEVICE_2
+#ifndef DEVICE_2_H
+#define DEVICE_2_H
 
 // MOTORS
 #include "device_common.h"
-#include <stdint.h>
 
 // Marker and Eraser
 
 
-int set_marker_eraser_position(uint8_t* position);
+int set_marker_eraser_position(const uint8_t* position);
 
 
 
-#endif //DEVICE_2
+#endif //DEVICE_2_H

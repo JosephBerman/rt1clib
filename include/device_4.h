@@ -1,14 +1,13 @@
-#ifndef DEVICE_4
-#define DEVICE_4
+#ifndef DEVICE_4_H
+#define DEVICE_4_H
 
 // Color Sensor
 
 
 #include "device_common.h"
-#include <stdint.h>
 
-int get_color_sensor_data(uint8_t* bank, uint8_t* lighting, uint8_t* format);
-
+int get_color_sensor_data(const uint8_t* bank, const uint8_t* lighting, const uint8_t* format);
 
 
-#endif //DEVICE_4
+
+#endif //DEVICE_4_H

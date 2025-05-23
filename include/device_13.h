@@ -1,5 +1,5 @@
-#ifndef DEVICE_13
-#define DEVICE_13
+#ifndef DEVICE_13_H
+#define DEVICE_13_H
 
 // Light Sensors
 
@@ -10,4 +10,4 @@
 int get_light_values();
 
 
-#endif //DEVICE_13
+#endif //DEVICE_13_H

@@ -1,5 +1,5 @@
-#ifndef DEVICE_14
-#define DEVICE_14
+#ifndef DEVICE_14_H
+#define DEVICE_14_H
 
 // Battery
 
@@ -10,4 +10,4 @@
 int get_battery_level();
 
 
-#endif //DEVICE_14
+#endif //DEVICE_14_H

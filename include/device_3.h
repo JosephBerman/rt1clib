@@ -1,14 +1,13 @@
-#ifndef DEVICE_3
-#define DEVICE_3
+#ifndef DEVICE_3_H
+#define DEVICE_3_H
 
 // LEDs
 
 
 #include "device_common.h"
-#include <stdint.h>
 
 
-int set_LED(uint8_t* state, uint8_t* red, uint8_t* green, uint8_t* blue);
+int set_LED(const uint8_t* state, const uint8_t* red, const uint8_t* green, const uint8_t* blue);
 
 
-#endif //DEVICE_3
+#endif //DEVICE_3_H

@@ -1,5 +1,5 @@
-#ifndef DEVICE_16
-#define DEVICE_16
+#ifndef DEVICE_16_H
+#define DEVICE_16_H
 
 // Accelerometer
 
@@ -9,4 +9,4 @@
 
 int get_accelerometer();
 
-#endif //DEVICE_16
+#endif //DEVICE_16_H
