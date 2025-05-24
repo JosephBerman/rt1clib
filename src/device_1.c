@@ -69,7 +69,7 @@ void navigate_to_position(device_message msg, const int32_t *pos_x, const int32_
     crc_update(msg);
 }
 
-// Command 27
+// COMMAND 27
 void drive_arc(device_message msg, const int32_t *angle, const int32_t *radius)
 {
     set_payload_two_param(msg, DEVICE_ID_1, 27, 0, angle, sizeof(*angle) ,radius, sizeof(*radius));
