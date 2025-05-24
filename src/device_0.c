@@ -15,9 +15,7 @@ void get_version(device_message msg, const uint8_t *board_type)
 // Will only keep the first 16 characters
 void set_name(device_message msg, const char *name)
 {
-
     set_payload_one_param(msg, DEVICE_ID_0, 1, 0, name);
-
     crc_update(msg);
 }
 
@@ -38,7 +36,6 @@ void stop_and_reset(device_message msg)
 // COMMAND ID 6
 void disconnect(device_message msg)
 {
-
     set_empty_payload(msg, DEVICE_ID_0, 6, 0);
     crc_update(msg);
 }
@@ -56,7 +53,6 @@ void disable_events(device_message msg, const char *events)
 // COMMAND ID 11
 void get_enabled_events(device_message msg)
 {
-
     set_empty_payload(msg, DEVICE_ID_0, 11, 0);
     crc_update(msg);
 }

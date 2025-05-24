@@ -27,6 +27,12 @@ void get_position(device_message msg);
 
 void navigate_to_position(device_message msg, const int32_t *pos_x, const int32_t *pos_y, const uint8_t *heading);
 
+/* dock and undock will be added last as the rt0/1 does not support this command
+// COMMAND ID 19
+// void dock(device_message msg);
+// COMMAND ID 20
+// void undock(device_message msg);
+*/
 void drive_arc(device_message msg, const int32_t *angle, const int32_t *radius);
 
 #endif // DEVICE_1_H

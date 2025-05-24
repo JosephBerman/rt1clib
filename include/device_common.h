@@ -64,33 +64,46 @@ static inline void set_message_id_and_crc_update(device_message msg, uint8_t ID)
     msg[MESSAGE_BIT_CRC] = _crc_update(msg);
 }
 
+static inline void _clear_payload(device_message msg)
+{
+    memset(&msg[MESSAGE_BIT_PAYLOAD_START], 0, DEVICE_PAYLOAD_LENGTH);
+}
+
 static inline void set_empty_payload(device_message msg, uint8_t device, uint8_t cmd, uint8_t id)
 {
     msg[MESSAGE_BIT_DEVICE] = device;
     msg[MESSAGE_BIT_CMD] = cmd;
     msg[MESSAGE_BIT_ID] = id;
+    _clear_payload(msg);
 }
 
 void set_payload_one_param(device_message msg,
                            const uint8_t *message_device,
                            const uint8_t *message_cmd,
                            const uint8_t *message_id,
-                           const void *param);
+                           const void *param,
+                           const uint8_t *param_len);
 
 void set_payload_two_param(device_message msg,
                            const uint8_t *message_device,
                            const uint8_t *message_cmd,
                            const uint8_t *message_id,
                            const void *param1,
-                           const void *param2);
+                           const uint8_t *param1_len,
+                           const void *param2,
+                           const uint8_t *param2_len
+                           );
 
-// void set_payload_three_param(device_message msg,
-//     const uint8_t* message_device,
-//     const uint8_t* message_cmd,
-//     const uint8_t* message_id,
-//     const void* param1,
-//     const void* param2,
-//     const void* param3);
+void set_payload_three_param(device_message msg,
+                             const uint8_t *message_device,
+                             const uint8_t *message_cmd,
+                             const uint8_t *message_id,
+                             const void *param1,
+                             const uint8_t *param1_len,
+                             const void *param2,
+                             const uint8_t *param2_len,
+                             const void *param3,
+                             const uint8_t *param3_len);
 
 // void set_payload_four_param(device_message msg,
 //     const uint8_t* message_device,
