@@ -7,7 +7,7 @@
 // Marker and Eraser
 
 
-int set_marker_eraser_position(const uint8_t* position);
+void set_marker_eraser_position(const uint8_t* position);
 
 
 

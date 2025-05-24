@@ -6,13 +6,13 @@
 
 #include "device_common.h"
 
-int play_note(const uint32_t* frequency, const  uint16_t duration);
+void play_note(const uint32_t* frequency, const  uint16_t duration);
 
-int stop_sound();
+void stop_sound();
 
-int say_phrase(device_payload* phrase);
+void say_phrase(char* phrase);
 
-int play_sweep(const uint32_t* start_frequency,
+void play_sweep(const uint32_t* start_frequency,
         const uint32_t* end_frequency,
         const uint16_t* duration,
         const uint8_t* attack,

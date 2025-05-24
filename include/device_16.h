@@ -7,6 +7,6 @@
 #include "device_common.h"
 
 
-int get_accelerometer();
+void get_accelerometer();
 
 #endif //DEVICE_16_H

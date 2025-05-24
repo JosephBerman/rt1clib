@@ -7,7 +7,7 @@
 #include "device_common.h"
 
 
-int set_LED(const uint8_t* state, const uint8_t* red, const uint8_t* green, const uint8_t* blue);
+void set_LED(const uint8_t* state, const uint8_t* red, const uint8_t* green, const uint8_t* blue);
 
 
 #endif //DEVICE_3_H

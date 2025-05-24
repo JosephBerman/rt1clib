@@ -7,7 +7,7 @@
 #include "device_common.h"
 
 
-int get_battery_level();
+void get_battery_level();
 
 
 #endif //DEVICE_14_H

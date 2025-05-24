@@ -12,27 +12,27 @@
 
 //To robot
 //COMAND ID 0
-int get_version(device_message msg, const uint8_t* board_type);
+void get_version(device_message msg, const uint8_t* board_type);
 
-int set_name(device_message msg, const char* name);
+void set_name(device_message msg, const char* name);
 
-int get_name(device_message msg);
+void get_name(device_message msg);
 
-int stop_and_reset(device_message msg);
+void stop_and_reset(device_message msg);
 
-int disconnect(device_message msg);
-
-//events 16 bytes
-int enable_events(device_message msg, const char* events);
+void disconnect(device_message msg);
 
 //events 16 bytes
-int disable_events(device_message msg, const char* events);
+void enable_events(device_message msg, const char* events);
 
-int get_enabled_events(device_message msg);
+//events 16 bytes
+void disable_events(device_message msg, const char* events);
 
-int get_serial_number(device_message msg);
+void get_enabled_events(device_message msg);
 
-int get_sku(device_message msg);
+void get_serial_number(device_message msg);
+
+void get_sku(device_message msg);
 
 
 
