@@ -1,13 +1,9 @@
 #include "device_0.h"
 
-// TODO change to set_payload_one_param
 //  COMMAND ID 0
-void get_version(device_message msg, const uint8_t *board_type)
+void get_version(device_message msg, const uint8_t board_type)
 {
-    msg[MESSAGE_BIT_DEVICE] = DEVICE_ID_0;
-    msg[MESSAGE_BIT_CMD] = 0;
-    msg[MESSAGE_BIT_ID] = 0;
-    msg[MESSAGE_BIT_PAYLOAD_START] = board_type;
+    set_payload_one_param(msg, DEVICE_ID_0,0,0, board_type, sizeof(board_type));
     crc_update(msg);
 }
 

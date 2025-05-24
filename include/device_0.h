@@ -12,7 +12,7 @@
 
 //To robot
 //COMAND ID 0
-void get_version(device_message msg, const uint8_t* board_type);
+void get_version(device_message msg, const uint8_t board_type);
 
 void set_name(device_message msg, const char* name);
 

@@ -1,9 +1,9 @@
 #include "device_common.h"
 
 void set_payload_one_param(device_message msg,
-                           const uint8_t *message_device,
-                           const uint8_t *message_cmd,
-                           const uint8_t *message_id,
+                           const uint8_t message_device,
+                           const uint8_t message_cmd,
+                           const uint8_t message_id,
                            const void *param,
                            const uint8_t param_len)
 {
@@ -22,9 +22,9 @@ void set_payload_one_param(device_message msg,
 }
 
 void set_payload_two_param(device_message msg,
-                           const uint8_t *message_device,
-                           const uint8_t *message_cmd,
-                           const uint8_t *message_id,
+                           const uint8_t message_device,
+                           const uint8_t message_cmd,
+                           const uint8_t message_id,
                            const void *param1,
                            const uint8_t param1_len,
                            const void *param2,
@@ -48,9 +48,9 @@ void set_payload_two_param(device_message msg,
 }
 
 void set_payload_three_param(device_message msg,
-                             const uint8_t *message_device,
-                             const uint8_t *message_cmd,
-                             const uint8_t *message_id,
+                             const uint8_t message_device,
+                             const uint8_t message_cmd,
+                             const uint8_t message_id,
                              const void *param1,
                              const uint8_t param1_len,
                              const void *param2,
