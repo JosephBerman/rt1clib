@@ -3,10 +3,8 @@
 
 // Accelerometer
 
-
 #include "device_common.h"
-
 
 void get_accelerometer();
 
-#endif //DEVICE_16_H
+#endif // DEVICE_16_H

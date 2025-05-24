@@ -6,9 +6,6 @@
 
 // Marker and Eraser
 
+void set_marker_eraser_position(const uint8_t *position);
 
-void set_marker_eraser_position(const uint8_t* position);
-
-
-
-#endif //DEVICE_2_H
+#endif // DEVICE_2_H

@@ -3,11 +3,8 @@
 
 // Touch Sensors
 
-
 #include "device_common.h"
-
 
 // This device is read only from robot
 
-
-#endif //DEVICE_17_H
+#endif // DEVICE_17_H

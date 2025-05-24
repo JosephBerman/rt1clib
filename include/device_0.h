@@ -5,7 +5,7 @@
 
 #include "device_common.h"
 
-#define DEVICE_0_ID 0
+#define DEVICE_ID_0 0
 
 #define BOARD_VERSION_MAIN 0xA5
 #define BOARD_VERSION_COLOR 0xC6

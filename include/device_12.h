@@ -3,11 +3,8 @@
 
 // Bumpers
 
-
 #include "device_common.h"
-
 
 // This device is read only from robot
 
-
-#endif //DEVICE_12_H
+#endif // DEVICE_12_H

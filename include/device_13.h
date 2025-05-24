@@ -3,11 +3,8 @@
 
 // Light Sensors
 
-
 #include "device_common.h"
-
 
 void get_light_values();
 
-
-#endif //DEVICE_13_H
+#endif // DEVICE_13_H
