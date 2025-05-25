@@ -1,7 +1,7 @@
 #include "device_sound.h"
 
 //  COMMAND ID 0
-void play_note(device_message msg,const uint32_t *frequency, const uint16_t *duration)
+void play_note(device_message msg, const uint32_t *frequency, const uint16_t *duration)
 {
     const void *params[2] = {frequency, duration};
     const uint8_t params_len[2] = {sizeof(*frequency), sizeof(*duration)};
@@ -17,10 +17,10 @@ void stop_sound(device_message msg)
 }
 
 //  COMMAND ID 4
-void say_phrase(device_message msg,const  char *phrase)
+void say_phrase(device_message msg, const char *phrase)
 {
     const void *params[1] = {phrase};
-    const uint8_t params_len[1] = {strnlen(phrase, DEVICE_PAYLOAD_LENGTH)};
+    const uint8_t params_len[1] = {(uint8_t)strnlen(phrase, DEVICE_PAYLOAD_LENGTH)};
     set_payload_params(msg, DEVICE_ID_SOUND, 4, 0, params, params_len, 1);
     crc_update(msg);
 }
