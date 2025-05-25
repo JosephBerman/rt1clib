@@ -5,6 +5,8 @@
 
 #include "device_common.h"
 
-void get_battery_level();
+#define DEVICE_ID_BATTERY 14
+
+void get_battery_level(device_message msg);
 
 #endif // DEVICE_BATTERY_H

@@ -13,8 +13,8 @@ void get_version(device_message msg, const uint8_t board_type)
 // Will only keep the first 16 characters
 void set_name(device_message msg, const char *name)
 {
-     const void* params[1] = {name};
-    const uint8_t params_len[1] = {sizeof(name)};
+    const void* params[1] = {name};
+    const uint8_t params_len[1] = {strlen(name)};
     set_payload_params(msg, DEVICE_ID_GENERAL, 1, 0, params, params_len,1);
     crc_update(msg);
 }

@@ -4,7 +4,8 @@
 // Accelerometer
 
 #include "device_common.h"
+#define DEVICE_ID_ACCELEROMETER 16
 
-void get_accelerometer();
+void get_accelerometer(device_message msg);
 
 #endif // DEVICE_ACCELEROMETER_H

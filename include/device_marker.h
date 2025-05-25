@@ -3,7 +3,7 @@
 
 #include "device_common.h"
 
-#define DEVICE_ID_MARKER 3
+#define DEVICE_ID_MARKER 2
 
 // Marker and Eraser
 

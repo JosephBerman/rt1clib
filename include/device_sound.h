@@ -5,13 +5,16 @@
 
 #include "device_common.h"
 
-void play_note(const uint32_t *frequency, const uint16_t duration);
+#define DEVICE_ID_SOUND 5
 
-void stop_sound();
+void play_note(device_message msg, uint32_t *frequency, const uint16_t* duration);
 
-void say_phrase(char *phrase);
+void stop_sound(device_message msg);
 
-void play_sweep(const uint32_t *start_frequency,
+void say_phrase(device_message msg, char *phrase);
+
+void play_sweep(device_message msg,
+                const uint32_t *start_frequency,
                 const uint32_t *end_frequency,
                 const uint16_t *duration,
                 const uint8_t *attack,
