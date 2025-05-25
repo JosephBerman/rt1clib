@@ -7,7 +7,7 @@
 
 #define DEVICE_ID_SOUND 5
 
-void play_note(device_message msg, uint32_t *frequency, const uint16_t* duration);
+void play_note(device_message msg, const uint32_t *frequency, const uint16_t* duration);
 
 void stop_sound(device_message msg);
 
