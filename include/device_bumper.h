@@ -1,5 +1,5 @@
-#ifndef DEVICE_12_H
-#define DEVICE_12_H
+#ifndef DEVICE_BUMPER_H
+#define DEVICE_BUMPER_H
 
 // Bumpers
 
@@ -7,4 +7,4 @@
 
 // This device is read only from robot
 
-#endif // DEVICE_12_H
+#endif // DEVICE_BUMPER_H

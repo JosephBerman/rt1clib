@@ -1,4 +1,4 @@
-#include "device_0.h"
+#include "device_general.h"
 
 //  COMMAND ID 0
 void get_version(device_message msg, const uint8_t board_type)

@@ -1,5 +1,5 @@
-#ifndef DEVICE_20_H
-#define DEVICE_20_H
+#ifndef DEVICE_CLIFF_H
+#define DEVICE_CLIFF_H
 
 // Cliff Sensor
 
@@ -7,4 +7,4 @@
 
 // This device is read only from robot
 
-#endif // DEVICE_20_H
+#endif // DEVICE_CLIFF_H

@@ -1,5 +1,5 @@
-#ifndef DEVICE_0_H
-#define DEVICE_0_H
+#ifndef DEVICE_GENERAL_H
+#define DEVICE_GENERAL_H
 
 // GENERAL
 
@@ -36,4 +36,4 @@ void get_sku(device_message msg);
 
 
 
-#endif //DEVICE_0_H
+#endif //DEVICE_GENERAL_H

@@ -1,5 +1,5 @@
-#ifndef DEVICE_17_H
-#define DEVICE_17_H
+#ifndef DEVICE_TOUCH_H
+#define DEVICE_TOUCH_H
 
 // Touch Sensors
 
@@ -7,4 +7,4 @@
 
 // This device is read only from robot
 
-#endif // DEVICE_17_H
+#endif // DEVICE_TOUCH_H

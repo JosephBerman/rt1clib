@@ -1,5 +1,4 @@
-#include "device_1.h"
-#include <device_0.h>
+#include "device_motor.h"
 
 // COMMAND ID 4
 void set_left_right_motor_speed(device_message msg, const int32_t *left_speed, const int32_t *right_speed)

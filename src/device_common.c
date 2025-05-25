@@ -1,5 +1,7 @@
 #include "device_common.h"
 
+// TODO condense this into a single function
+
 void set_payload_one_param(device_message msg,
                            const uint8_t message_device,
                            const uint8_t message_cmd,
@@ -9,7 +11,6 @@ void set_payload_one_param(device_message msg,
 {
 
     set_empty_payload(msg, message_device, message_cmd, message_id);
-    _clear_payload(msg);
 
     if (param_len > DEVICE_PAYLOAD_LENGTH)
     {
@@ -33,7 +34,6 @@ void set_payload_two_param(device_message msg,
 
     set_empty_payload(msg, message_device, message_cmd, message_id);
     // clear payload
-    _clear_payload(msg);
 
     if ((param1_len + param2_len) > DEVICE_PAYLOAD_LENGTH)
     {
@@ -60,7 +60,6 @@ void set_payload_three_param(device_message msg,
 {
 
     set_empty_payload(msg, message_device, message_cmd, message_id);
-    _clear_payload(msg);
 
     if ((param1_len + param2_len + param3_len) > DEVICE_PAYLOAD_LENGTH)
     {

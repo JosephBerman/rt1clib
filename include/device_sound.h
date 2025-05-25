@@ -1,5 +1,5 @@
-#ifndef DEVICE_5_H
-#define DEVICE_5_H
+#ifndef DEVICE_SOUND_H
+#define DEVICE_SOUND_H
 
 // Sound
 
@@ -21,4 +21,4 @@ void play_sweep(const uint32_t *start_frequency,
                 const uint8_t *modulation_rate,
                 const uint8_t *append);
 
-#endif // DEVICE_5_H
+#endif // DEVICE_SOUND_H

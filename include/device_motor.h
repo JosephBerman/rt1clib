@@ -1,5 +1,5 @@
-#ifndef DEVICE_1_H
-#define DEVICE_1_H
+#ifndef DEVICE_MOTOR_H
+#define DEVICE_MOTOR_H
 
 #define DEVICE_ID_1 1
 
@@ -35,4 +35,4 @@ void navigate_to_position(device_message msg, const int32_t *pos_x, const int32_
 */
 void drive_arc(device_message msg, const int32_t *angle, const int32_t *radius);
 
-#endif // DEVICE_1_H
+#endif // DEVICE_MOTOR_H

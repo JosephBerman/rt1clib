@@ -1,5 +1,5 @@
-#ifndef DEVICE_13_H
-#define DEVICE_13_H
+#ifndef DEVICE_LIGHT_H
+#define DEVICE_LIGHT_H
 
 // Light Sensors
 
@@ -7,4 +7,4 @@
 
 void get_light_values();
 
-#endif // DEVICE_13_H
+#endif // DEVICE_LIGHT_H
