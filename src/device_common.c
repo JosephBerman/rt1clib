@@ -2,75 +2,33 @@
 
 // TODO condense this into a single function
 
-void set_payload_one_param(device_message msg,
+void set_payload_params(device_message msg,
                            const uint8_t message_device,
                            const uint8_t message_cmd,
                            const uint8_t message_id,
-                           const void *param,
-                           const uint8_t param_len)
+                           const void **params,
+                           const uint8_t *params_lens,
+                           const uint8_t num_params)
 {
 
     set_empty_payload(msg, message_device, message_cmd, message_id);
 
-    if (param_len > DEVICE_PAYLOAD_LENGTH)
+    // TODO fix overflow vulnerability here if total length rolls over 255 it will be less than payload length
+    uint8_t total_len = 0;
+    for (uint8_t i = 0; i < num_params; i++){
+        total_len += params_lens[i];
+    }
+
+    if (total_len > DEVICE_PAYLOAD_LENGTH)
     {
         // TODO Error handling
         return;
     }
 
-    // msg[3 : param_len or maximum payload length, which ever is smallest]
-    memcpy(&msg[MESSAGE_BIT_PAYLOAD_START], param, param_len);
-}
-
-void set_payload_two_param(device_message msg,
-                           const uint8_t message_device,
-                           const uint8_t message_cmd,
-                           const uint8_t message_id,
-                           const void *param1,
-                           const uint8_t param1_len,
-                           const void *param2,
-                           const uint8_t param2_len)
-{
-
-    set_empty_payload(msg, message_device, message_cmd, message_id);
-    // clear payload
-
-    if ((param1_len + param2_len) > DEVICE_PAYLOAD_LENGTH)
+    uint8_t offset = MESSAGE_BIT_PAYLOAD_START;
+    for (uint8_t i = 0; i < num_params; i++)
     {
-        // TODO Error handling
-        return;
+        memcpy(&msg[offset], params[i], params_lens[i]);
+        offset  += params_lens[i];
     }
-
-    // msg[3: param1_len - 1]
-    memcpy(&msg[MESSAGE_BIT_PAYLOAD_START], param1, param1_len);
-    // msg[param1_len : param1_len + param2_len -1 ]
-    memcpy(&msg[MESSAGE_BIT_PAYLOAD_START + param1_len], param2, param2_len);
-}
-
-void set_payload_three_param(device_message msg,
-                             const uint8_t message_device,
-                             const uint8_t message_cmd,
-                             const uint8_t message_id,
-                             const void *param1,
-                             const uint8_t param1_len,
-                             const void *param2,
-                             const uint8_t param2_len,
-                             const void *param3,
-                             const uint8_t param3_len)
-{
-
-    set_empty_payload(msg, message_device, message_cmd, message_id);
-
-    if ((param1_len + param2_len + param3_len) > DEVICE_PAYLOAD_LENGTH)
-    {
-        // TODO Error handling
-        return;
-    }
-
-    // msg[3: param1_len - 1]
-    memcpy(&msg[MESSAGE_BIT_PAYLOAD_START], param1, param1_len);
-    // msg[param1_len : param1_len + param2_len -1 ]
-    memcpy(&msg[MESSAGE_BIT_PAYLOAD_START + param1_len], param2, param2_len);
-    // msg[sizeof(param1_len + param2_len) : param1_len + param2_len + param3_len - 1]
-    memcpy(&msg[MESSAGE_BIT_PAYLOAD_START + param1_len + param2_len], param3, param3_len);
 }

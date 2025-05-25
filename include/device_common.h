@@ -77,41 +77,12 @@ static inline void set_empty_payload(device_message msg, uint8_t device, uint8_t
     _clear_payload(msg);
 }
 
-void set_payload_one_param(device_message msg,
+void set_payload_params(device_message msg,
                            const uint8_t message_device,
                            const uint8_t message_cmd,
                            const uint8_t message_id,
-                           const void *param,
-                           const uint8_t param_len);
-
-void set_payload_two_param(device_message msg,
-                           const uint8_t message_device,
-                           const uint8_t message_cmd,
-                           const uint8_t message_id,
-                           const void *param1,
-                           const uint8_t param1_len,
-                           const void *param2,
-                           const uint8_t param2_len
-                           );
-
-void set_payload_three_param(device_message msg,
-                             const uint8_t message_device,
-                             const uint8_t message_cmd,
-                             const uint8_t message_id,
-                             const void *param1,
-                             const uint8_t param1_len,
-                             const void *param2,
-                             const uint8_t param2_len,
-                             const void *param3,
-                             const uint8_t param3_len);
-
-// void set_payload_four_param(device_message msg,
-//     const uint8_t* message_device,
-//     const uint8_t* message_cmd,
-//     const uint8_t* message_id,
-//     const void* param1,
-//     const void* param2,
-//     const void* param3,
-//     const void* param4);
+                           const void **params,
+                           const uint8_t *params_lens,
+                           const uint8_t num_params);
 
 #endif // DEVICE_COMMON_H
