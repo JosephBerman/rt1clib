@@ -11,7 +11,7 @@ void play_note(device_message msg, const uint32_t *frequency, const uint16_t* du
 
 void stop_sound(device_message msg);
 
-void say_phrase(device_message msg, char *phrase);
+void say_phrase(device_message msg, const char *phrase);
 
 void play_sweep(device_message msg,
                 const uint32_t *start_frequency,

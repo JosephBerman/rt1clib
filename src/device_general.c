@@ -42,12 +42,20 @@ void disconnect(device_message msg)
 // COMMAND ID 7
 void enable_events(device_message msg, const char *events)
 {
+    const void *params[1] = {events};
+    const uint8_t params_len[1] = {DEVICE_PAYLOAD_LENGTH};
+    set_payload_params(msg, DEVICE_ID_GENERAL, 7, 0, params, params_len, 1);
+    crc_update(msg);
 }
 
 // events 16 bytes
 //  COMMAND ID 9
 void disable_events(device_message msg, const char *events)
 {
+     const void *params[1] = {events};
+    const uint8_t params_len[1] = {9};
+    set_payload_params(msg, DEVICE_ID_GENERAL, 9, 0, params, params_len, 1);
+    crc_update(msg);
 }
 
 // COMMAND ID 11
@@ -58,14 +66,14 @@ void get_enabled_events(device_message msg)
 }
 
 // COMMAND ID 14
-void get_enabled_events(device_message msg)
+void get_serial_number(device_message msg)
 {
     set_empty_payload(msg, DEVICE_ID_GENERAL, 14, 0);
     crc_update(msg);
 }
 
 // COMMAND ID 15
-void get_enabled_events(device_message msg)
+void get_sku(device_message msg)
 {
     set_empty_payload(msg, DEVICE_ID_GENERAL, 15, 0);
     crc_update(msg);
