@@ -26,7 +26,7 @@ void set_payload_params(device_message msg,
     }
 
     uint8_t offset = MESSAGE_BIT_PAYLOAD_START;
-    for (uint8_t i = 0; i < num_params; i++)
+    for (uint8_t i = 0; i < num_params ; i++)
     {
         memcpy(&msg[offset], params[i], params_lens[i]);
         offset  += params_lens[i];

@@ -4,7 +4,7 @@
 void get_version(device_message msg, const uint8_t *board_type)
 {
     const void *params[1] = {board_type};
-    const uint8_t params_len[1] = {sizeof(board_type)};
+    const uint8_t params_len[1] = {sizeof(*board_type)};
     set_payload_params(msg, DEVICE_ID_GENERAL, 0, 0, params, params_len, 1);
     crc_update(msg);
 }
