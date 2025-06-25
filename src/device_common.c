@@ -1,6 +1,5 @@
 #include "device_common.h"
 
-// TODO condense this into a single function
 
 void set_payload_params(device_message msg,
                            const uint8_t message_device,

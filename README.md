@@ -4,3 +4,5 @@ This library creates ease of use by creating packets to send over BLE. The BLE i
 
 
 CRC code is edited from iRobot  https://github.com/iRobotEducation/root-robot-ble-protocol
+
+JSMN for JSON https://github.com/zserge/jsmn

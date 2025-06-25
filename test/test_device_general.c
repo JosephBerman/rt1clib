@@ -127,5 +127,5 @@ int main()
     // COMMAND 11
     RUN_TEST(test_get_enabled_events);
 
-    return UNITY_END();
+    return UNITY_END();54
 }
